@@ -24,7 +24,7 @@ services:
       - MYSQL_USER=peserta
       - MYSQL_PASSWORD=password
     volumes:
-      - ./apps/database/:docker-entrypoint-initdb.d
+      - ./apps/database/:/docker-entrypoint-initdb.d
       - db-data:/var/lib/mysql
       
   phpmyadmin:
