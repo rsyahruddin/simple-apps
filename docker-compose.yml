@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.3"
 services: 
 
   backend:
@@ -17,7 +17,7 @@ services:
     links:
      - phpmyadmin
     ports:
-    - "3306"
+     - "3306"
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=training
@@ -30,7 +30,8 @@ services:
   phpmyadmin:
     image: "phpmyadmin"
     restart: always
-    ports: "8006:80"
+    ports: 
+      - "8006:80"
     environment:
       - PMA_HOST=db
 
